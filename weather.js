@@ -7,7 +7,7 @@ const title= document.querySelector("#title")
 
 const getWeather= async(city)=>{
     title.innerHTML=``
-    weather.innerHTML=`Loading...`
+    weather.innerHTML=`<p>Loading...</p>`
     const url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     const response= await fetch(url)
     const data=await response.json()
@@ -16,19 +16,23 @@ const getWeather= async(city)=>{
 }
 
 const showWeather=(data)=>{
+    console.log(data)
     if(data.cod=="404"){
         weather.innerHTML=`
-            <h2 style="display:flex; justify-content:center; align-items:center"> City not found </h2>
+            <h2 style=" position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);"> City not found </h2>
         `
         return
     }
     title.innerHTML=`
         <h1>${data.name}</h1>
-        <h2>20th Jan, 2023</h2>
+        <h2></h2>
     `
     weather.innerHTML=`
     <div class="column-1">
-        <img src="<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}2x.png">
+        <img src="<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
         <h3>${data.weather[0].main}</h3>
     </div>
 
@@ -49,7 +53,7 @@ const showWeather=(data)=>{
                 Rainfall
             </div>
             <div class="item-content">
-                yes
+                ${data.main.rain}
             </div>
         </div>
 
@@ -58,17 +62,16 @@ const showWeather=(data)=>{
                 Windspeed
             </div>
             <div class="item-content">
-                w
+                ${data.wind.speed}
             </div>
         </div>
 
         <div class="item">
-            <i class="fa-solid fa-droplet-percent"></i>
             <div class="item-title">
                 Humidity
             </div>
             <div class="item-content">
-                20%
+                ${data.main.humidity}
             </div>
         </div>
 
@@ -76,7 +79,7 @@ const showWeather=(data)=>{
     </div>
     `
 }
-
+getWeather("Aylesbury Vale")
 form.addEventListener("submit",function(event){
     getWeather(search.value)
     event.preventDefault()
