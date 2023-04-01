@@ -32,6 +32,7 @@
     padding: 20px;
 }
 input{
+    color: black;
     padding: 20px;
     outline: none;
     border: none;
@@ -44,6 +45,7 @@ input{
 .content{
     display: flex;
     justify-content: space-around;
+    letter-spacing: 0.1em;
 }
 .column-1{
     text-align: center;
@@ -61,5 +63,5 @@ input{
 }
 .item-title{
     padding: 5px;
-    
+    font-weight: bolder;
 }

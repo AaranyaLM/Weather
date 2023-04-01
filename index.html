@@ -6,27 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Boy</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
 </head>
 <body>
-    <script src="weather.js"></script>
+
 
     <div class="container">
 
         <div class="header">     
             <div class="search-container">
-                <input type="text" id="search" placeholder="Search your City">
+                <form >
+                    <input type="search" id="search" placeholder="Search your City">
+                </form>
+                
             </div>
         </div>   
 
-        <div class="title">
-            <h1>Kathmandu</h1>
-            <h2>20th Jan, 2023</h2>
+        <div class="title" id="title">
+            <!--<h1>Kathmandu</h1>
+            <h2>20th Jan, 2023</h2>-->
         </div>
          
         <div class="content" id="weather">
 
-            <div class="column-1">
+            <!--<div class="column-1">
                 <img src="https://logos-download.com/wp-content/uploads/2019/11/Sunny_Logo.png" style="height: 200px; width:250px">
                 <h3>Sunny</h3>
             </div>
@@ -34,17 +37,18 @@
             <div class="column-2">
 
                 <div class="item">
+
                     <div class="item-title">
-                        Tempr
+                        Temperature
                     </div>
                     <div class="item-content">
-                        23
+                        23°C
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="item-title">
-                        rainfall
+                        Rainfall
                     </div>
                     <div class="item-content">
                         yes
@@ -53,7 +57,7 @@
 
                 <div class="item">
                     <div class="item-title">
-                        windspeed
+                        Windspeed
                     </div>
                     <div class="item-content">
                         w
@@ -61,8 +65,9 @@
                 </div>
 
                 <div class="item">
+                    <i class="fa-solid fa-droplet-percent"></i>
                     <div class="item-title">
-                        humidity
+                        Humidity
                     </div>
                     <div class="item-content">
                         20%
@@ -70,10 +75,10 @@
                 </div>
 
                 </div>
-            </div>
+            </div> -->
         </div>
         
     </div>
-
+    <script src="weather.js"></script>
 </body>
 </html>
