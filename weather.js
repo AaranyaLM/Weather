@@ -62,7 +62,7 @@ const showWeather=(data)=>{
                 Pressure
             </div>
             <div class="item-content">
-              ${data.main.pressure}
+              ${data.main.pressure} mb
             </div>
         </div>
 
@@ -72,17 +72,17 @@ const showWeather=(data)=>{
                 Windspeed
             </div>
             <div class="item-content">
-                ${data.wind.speed}
+                ${data.wind.speed} km/h
             </div>
         </div>
 
         <div class="item">
-        <i class="fa-solid fa-droplet-degree"></i>
+            <i class="fa-solid fa-droplet"></i>
             <div class="item-title">
                 Humidity
             </div>
             <div class="item-content">
-                ${data.main.humidity}
+                ${data.main.humidity}%
             </div>
         </div>
 
