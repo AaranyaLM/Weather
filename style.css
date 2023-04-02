@@ -45,25 +45,22 @@ input{
 }
 .content{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     letter-spacing: 0.1em;
 
 }
-.column-1{
+.row-1{
     text-align: center;
     font-size: 35px;  
+    margin-top: 30px;
 }
-.column-1 img{
-    margin-top: 60%;
-}
-.column-1 .item-title{
+
+.row-1 .item-title{
     font-size: 30px;
 }
-.column-2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-
+.row-2{
+    display: flex;   
+    justify-content: space-evenly;
 }
 .item{
     font-size: 18px;
@@ -80,4 +77,11 @@ i{
     color: white;
     font-size: 35px;
     margin-bottom: 10px;
+}
+p{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

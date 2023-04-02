@@ -7,7 +7,7 @@ const title= document.querySelector("#title")
 
 const getWeather= async(city)=>{
     title.innerHTML=``
-    weather.innerHTML=`<p>Loading...</p>`
+    weather.innerHTML=`<p >Loading...</p>`
     const url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     const response= await fetch(url)
     const data=await response.json()
@@ -39,12 +39,12 @@ const showWeather=(data)=>{
         <h2>${formattedDate}</h2>
     `
     weather.innerHTML=`
-    <div class="column-1">
+    <div class="row-1">
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
         <div class="item-title">${data.weather[0].main}</div>
     </div>
 
-    <div class="column-2">
+    <div class="row-2">
 
         <div class="item">
             <i class="fa-solid fa-temperature-three-quarters"></i>
