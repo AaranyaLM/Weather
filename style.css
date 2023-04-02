@@ -24,7 +24,7 @@
 }
 .title h2{
     font-size: 15px;
-    margin-bottom: 25px;
+    margin-bottom:0px;
 }
 .header{
     display: flex;
@@ -45,16 +45,24 @@ input{
 }
 .content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     letter-spacing: 0.1em;
+
 }
 .column-1{
     text-align: center;
-    font-size: 35px;
+    font-size: 35px;  
+}
+.column-1 img{
+    margin-top: 60%;
+}
+.column-1 .item-title{
+    font-size: 30px;
 }
 .column-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 
 }
 .item{
@@ -70,4 +78,6 @@ input{
 
 i{
     color: white;
+    font-size: 35px;
+    margin-bottom: 10px;
 }

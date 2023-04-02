@@ -26,20 +26,28 @@ const showWeather=(data)=>{
         `
         return
     }
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const today = new Date();
+    const date = today.getDate();
+    const monthIndex = today.getMonth();
+    const year = today.getFullYear();
+    const monthName = months[monthIndex];
+    const formattedDate = `${date} ${monthName}, ${year}`;  
+
     title.innerHTML=`
         <h1>${data.name}</h1>
-        <h2></h2>
+        <h2>${formattedDate}</h2>
     `
     weather.innerHTML=`
     <div class="column-1">
-        <img src="<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
-        <h3>${data.weather[0].main}</h3>
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+        <div class="item-title">${data.weather[0].main}</div>
     </div>
 
     <div class="column-2">
 
         <div class="item">
-
+            <i class="fa-solid fa-temperature-three-quarters"></i>
             <div class="item-title">
                 Temperature
             </div>
@@ -49,15 +57,17 @@ const showWeather=(data)=>{
         </div>
 
         <div class="item">
+            <i class="fa-solid fa-gauge"></i>
             <div class="item-title">
-                Rainfall
+                Pressure
             </div>
             <div class="item-content">
-                ${data.main.rain}
+              ${data.main.pressure}
             </div>
         </div>
 
         <div class="item">
+            <i class="fa-solid fa-wind"></i>
             <div class="item-title">
                 Windspeed
             </div>
@@ -67,6 +77,7 @@ const showWeather=(data)=>{
         </div>
 
         <div class="item">
+        <i class="fa-solid fa-droplet-degree"></i>
             <div class="item-title">
                 Humidity
             </div>
