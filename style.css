@@ -98,3 +98,10 @@ p{
     font-size: smaller;
     color: rgba(255, 255, 255, 0.377);
 }
+
+@media screen and (max-width: 900px){
+    .row-2{
+        display: flex;
+        flex-direction: column;
+    }
+}
